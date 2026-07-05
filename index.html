@@ -1,133 +1,179 @@
-/* Core Layout Structure */
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #f7f9fa;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIMB Clicks Layout</title>
+    <style>
+        /* Core Layout Structure */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #F4F6F9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-/* Centralized CIMB Container Card */
-.login-container {
-    background: #ffffff;
-    padding: 2.5rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    border-top: 5px solid #cc0000; /* Signature CIMB Dark Red Banner */
-    width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-}
+        /* Centralized CIMB Container Card */
+        .login-container {
+            background: #FFFFFF;
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid #cc0000; /* Signature CIMB Dark Red Banner */
+            width: 100%;
+            max-width: 420px;
+            box-sizing: border-box;
+        }
 
-/* CIMB Clicks Branding Elements */
-.login-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #cc0000; /* CIMB Red */
-    letter-spacing: -0.5px;
-    margin-bottom: 0.75rem;
-}
-.logo span {
-    color: #4a4a4a; /* Gray for "Clicks" text */
-    font-weight: 400;
-}
-.login-header h1 {
-    font-size: 1.25rem;
-    color: #333333;
-    margin: 0 0 0.5rem 0;
-    font-weight: 600;
-}
-.login-header p {
-    font-size: 0.85rem;
-    color: #666666;
-    margin: 0;
-    line-height: 1.4;
-}
+        /* CIMB Clicks Branding Elements */
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #cc0000; /* CIMB Red */
+            letter-spacing: -0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .logo span {
+            color: #4a4a4a; /* Gray for "Clicks" text */
+            font-weight: 400;
+        }
+        .login-header h1 {
+            font-size: 1.25rem;
+            color: #333333;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+        .login-header p {
+            font-size: 0.85rem;
+            color: #666666;
+            margin: 0;
+            line-height: 1.4;
+        }
 
-/* Form Layout */
-.input-group {
-    margin-bottom: 1.25rem;
-}
-.input-group label {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #333333;
-    margin-bottom: 0.5rem;
-}
-.input-group input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    box-sizing: border-box;
-    transition: border-color 0.2s;
-}
-.input-group input:focus {
-    outline: none;
-    border-color: #cc0000; /* Border turns red on click */
-}
+        /* Form Layout */
+        .input-group {
+            margin-bottom: 1.25rem;
+        }
+        .input-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 0.5rem;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #cc0000; /* Border turns red on click */
+        }
 
-/* Actions Grid */
-.form-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;
-    margin-bottom: 1.75rem;
-}
-.remember-me {
-    color: #555555;
-    cursor: pointer;
-}
-.forgot-link {
-    color: #cc0000;
-    text-decoration: none;
-    font-weight: 500;
-}
-.forgot-link:hover {
-    text-decoration: underline;
-}
+        /* Actions Grid */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-bottom: 1.75rem;
+        }
+        .remember-me {
+            color: #333333;
+            cursor: pointer;
+        }
+        .forgot-link {
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
 
-/* Primary CIMB Button */
-.btn-submit {
-    width: 100%;
-    padding: 0.85rem;
-    background-color: #cc0000; /* Official Deep Red */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-.btn-submit:hover {
-    background-color: #b30000; /* Darker red state change */
-}
+        /* Primary CIMB Button */
+        .btn-submit {
+            width: 100%;
+            padding: 0.85rem;
+            background-color: #cc0000; /* Official Deep Red */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #a30000; /* Darker red state change */
+        }
 
-/* Footer Section */
-.login-footer {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.75rem;
-    color: #777777;
-    border-top: 1px solid #eeeeee;
-    padding-top: 1.25rem;
-    line-height: 1.5;
-}
-.login-footer a {
-    color: #cc0000;
-    text-decoration: none;
-}
-.login-footer a:hover {
-    text-decoration: underline;
-}
+        /* Footer Section */
+        .login-footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #777777;
+            border-top: 1px solid #eeeeee;
+            padding-top: 1.25rem;
+            line-height: 1.5;
+        }
+        .login-footer a {
+            color: #cc0000;
+            text-decoration: none;
+        }
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
+    <main class="login-container">
+        <header class="login-header">
+            <div class="logo">CIMB<span>Clicks</span></div>
+            <h1>Secure Login</h1>
+            <p>Please enter your credentials to safely access your dashboard.</p>
+        </header>
+
+        <form class="login-form">
+            <div class="input-group">
+                <label for="username">User ID</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+
+            <div class="form-actions">
+                <label class="remember-me">
+                    <input type="checkbox"> Remember My ID
+                </label>
+                <a href="#" class="forgot-link">Forgot ID/Password?</a>
+            </div>
+
+            <button type="submit" class="btn-submit">Proceed</button>
+        </form>
+
+        <footer class="login-footer">
+            <p>Always verify that your custom security phrase matches.</p>
+            <p>Need help? <a href="#">Contact Customer Care</a></p>
+        </footer>
+    </main>
+
+</body>
+</html>
